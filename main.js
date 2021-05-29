@@ -41,16 +41,16 @@ const renderer = new THREE.WebGLRenderer({
 // renderer.setClearColor( 0xffffff, 0)
 renderer.setPixelRatio(devicePixelRatio * 2);
 renderer.setSize(innerWidth, innerHeight);
-camera.position.setY(-32);
+camera.position.setY(-16);
 camera.rotation.y = 1.57;
 camera.rotation.z = 1.05;
 // camera.position.setZ(64);
 // camera.rotation.z = 1.570/2;
 renderer.render(scene, camera);
 
-const geometry = new THREE.TorusGeometry(32, 12, 8, 24);
+const geometry = new THREE.TorusGeometry(16, 8, 16, 24);
 const material = new THREE.MeshBasicMaterial({
-  color: 0x002DFF,
+  color: 0x808080,
   wireframe: true
 });
 
