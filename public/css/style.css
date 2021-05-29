@@ -1,0 +1,28 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #d3d3d3;
+}
+
+
+.main {
+ color:blue;
+ z-index: 1;
+ position: absolute;
+ /* text-align: center;
+ padding-top: 25%;
+ width: 100%; */
+}
+
+.main h1 {
+  line-height: 32px;
+  margin:0px;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
