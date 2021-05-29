@@ -33,7 +33,7 @@ import * as THREE from 'https://cdn.skypack.dev/three@0.128.0';
 const scene = new THREE.Scene();
 // scene.background = new THREE.Color( 0xE5E5FF);
 
-const camera = new THREE.PerspectiveCamera(60, innerWidth / innerHeight, 0.1, 1000);
+const camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 100);
 const renderer = new THREE.WebGLRenderer({
   alpha: true,
   canvas: document.querySelector('#bg')
@@ -41,14 +41,15 @@ const renderer = new THREE.WebGLRenderer({
 // renderer.setClearColor( 0xffffff, 0)
 renderer.setPixelRatio(devicePixelRatio * 2);
 renderer.setSize(innerWidth, innerHeight);
-camera.position.setY(-16);
+camera.position.setY(-32);
+// camera.position.setZ(6);
 camera.rotation.y = 1.57;
-camera.rotation.z = 1.05;
+// camera.rotation.z = 1.05;
 // camera.position.setZ(64);
-// camera.rotation.z = 1.570/2;
+camera.rotation.z = 1.57;
 renderer.render(scene, camera);
 
-const geometry = new THREE.TorusGeometry(16, 8, 16, 24);
+const geometry = new THREE.TorusGeometry(32, 8, 6, 16);
 const material = new THREE.MeshBasicMaterial({
   color: 0x808080,
   wireframe: true
@@ -63,7 +64,7 @@ function animate() {
   renderer.render(scene, camera)
   // renderer.setSize(innerWidth, innerHeight);
 
-  torus.rotation.z += 0.001;
+  torus.rotation.z -= 0.0005;
   // torus.rotation.y -= 0.002;
 }
 
